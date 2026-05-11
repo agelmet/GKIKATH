@@ -118,8 +118,8 @@
     <nav class="fixed w-full z-50 transition-all duration-500 glass-nav" id="navbar">
         <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
             <a href="#" class="group relative flex items-center gap-4 py-2">
-                <!-- Bigger, Circled, uncropped logo with glowing shadow effect -->
-                <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-2 border-transparent bg-white shadow-lg p-2 overflow-hidden transition-all duration-500 group-hover:shadow-glow-lg group-hover:border-luxury-taupe group-hover:scale-105 flex items-center justify-center relative z-10">
+                <!-- Squared Logo (Elegant slightly rounded corners) -->
+                <div id="nav-logo-wrapper" class="w-24 h-24 md:w-28 md:h-28 rounded-xl border-2 border-transparent bg-white shadow-lg p-2 overflow-hidden transition-all duration-500 group-hover:shadow-glow-lg group-hover:border-luxury-taupe group-hover:scale-105 flex items-center justify-center relative z-10">
                     <img src="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/Gemini_Generated_Image_bkew7wbkew7wbkew.png" alt="Αθανασία Γκίκα Logo" class="w-full h-full object-contain drop-shadow-sm">
                 </div>
             </a>
@@ -182,16 +182,16 @@
                 </div>
             </div>
 
-            <!-- Right Portrait Image -->
+            <!-- Right Portrait Image (Made significantly larger with max-w-[580px]) -->
             <div class="relative reveal delay-200 hidden lg:block">
                 <!-- Floating decorative elements -->
                 <div class="absolute -top-10 -right-10 w-32 h-32 bg-luxury-taupe/20 rounded-full blur-2xl animate-pulse-glow"></div>
                 <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse-glow" style="animation-delay: 2s;"></div>
                 
-                <div class="relative w-full max-w-[480px] ml-auto animate-float">
+                <div class="relative w-full max-w-[580px] ml-auto animate-float">
                     <!-- Offset elegant frame -->
                     <div class="absolute inset-0 border border-luxury-taupe/50 translate-x-6 -translate-y-6 transition-transform duration-700 hover:translate-x-3 hover:-translate-y-3"></div>
-                    <div class="relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                    <div class="relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] bg-luxury-dark/10">
                         <img src="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/42424244224fa.jpg" alt="Αθανασία Γκίκα Ψυχολόγος" class="relative w-full h-auto object-cover z-10 filter contrast-[1.05] hover:scale-105 transition-transform duration-700">
                     </div>
                 </div>
@@ -472,9 +472,9 @@
             <div class="grid md:grid-cols-3 gap-16 mb-20">
                 
                 <div class="reveal">
-                    <!-- Bigger footer logo -->
-                    <div class="w-28 h-28 rounded-full border border-luxury-taupe p-2 bg-white flex items-center justify-center mb-8 shadow-glow">
-                        <img src="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/Gemini_Generated_Image_bkew7wbkew7wbkew.png" alt="Logo" class="w-full h-full object-contain">
+                    <!-- Squared footer logo -->
+                    <div class="w-32 h-32 rounded-xl border border-luxury-taupe p-2 bg-white flex items-center justify-center mb-8 shadow-glow">
+                        <img src="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/Gemini_Generated_Image_bkew7wbkew7wbkew.png" alt="Logo" class="w-full h-full object-contain rounded-lg">
                     </div>
                     <p class="text-gray-400 font-light leading-relaxed mb-8">
                         Η επούλωση ξεκινά με ένα βήμα. Επικοινωνήστε για να ορίσουμε την πρώτη σας συνεδρία σε ένα περιβάλλον απόλυτης αποδοχής.
@@ -556,7 +556,8 @@
 
         // Navbar Scroll Effect (Size reduction on scroll for elegance)
         const navbar = document.getElementById('navbar');
-        const navLogo = navbar.querySelector('div.rounded-full');
+        const navLogo = document.getElementById('nav-logo-wrapper');
+        
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 navbar.classList.add('py-1', 'shadow-sm');

@@ -156,21 +156,32 @@
     <section class="relative min-h-screen flex items-center pt-32 pb-12 overflow-hidden bg-luxury-dark">
         <!-- Background Image with brighter overlay -->
         <div class="absolute inset-0 z-0 overflow-hidden">
-            <!-- Full brightness image with pan animation -->
             <img src="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/unnamed-153232.jpg" alt="Space Background" class="w-full h-full object-cover animate-hero-pan opacity-80 md:opacity-100">
-            <!-- Smart Gradient: Dark on the left for text readability, fully transparent on the right -->
             <div class="absolute inset-0 bg-gradient-to-r from-luxury-dark via-luxury-dark/70 to-transparent"></div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-12 items-center relative z-10">
+        <!-- Changed grid columns to 12 to allow pushing the image further right -->
+        <div class="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-12 gap-8 items-center relative z-10">
+            
             <!-- Left Text Content -->
-            <div class="text-left pt-10 lg:pt-0 reveal">
+            <div class="text-left pt-10 lg:pt-0 reveal lg:col-span-7 flex flex-col items-start">
                 <span class="inline-block px-4 py-1.5 border border-luxury-taupe/40 rounded-full text-luxury-taupe text-xs font-bold tracking-ultra uppercase mb-8 shadow-glow bg-luxury-dark/30 backdrop-blur-sm">
                     Αδειουχος Ψυχολογος (Αρ. Αδειας: 505404)
                 </span>
-                <h1 class="text-5xl lg:text-7xl font-serif text-white leading-tight mb-8 text-balance drop-shadow-2xl">
+
+                <!-- Mobile Portrait Image (Appears ONLY on Mobile right after the badge) -->
+                <div class="block lg:hidden w-full max-w-[320px] mb-10 relative animate-float self-center sm:self-start">
+                    <div class="absolute inset-0 border border-luxury-taupe/50 translate-x-4 -translate-y-4"></div>
+                    <div class="relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] bg-luxury-dark/10">
+                        <img src="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/42424244224fa.jpg" alt="Αθανασία Γκίκα Ψυχολόγος" class="relative w-full h-auto object-cover z-10 filter contrast-[1.05]">
+                    </div>
+                </div>
+
+                <!-- Text sizing adjusted to text-4xl on mobile to prevent cropping -->
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-serif text-white leading-tight mb-8 text-balance drop-shadow-2xl break-words sm:break-normal">
                     Αποκωδικοποιώντας το <span class="italic text-luxury-taupe relative inline-block">Παρόν<span class="absolute -bottom-2 left-0 w-full h-px bg-luxury-taupe opacity-50"></span></span>,<br>Σχεδιάζοντας το <span class="italic text-luxury-taupe">Μέλλον</span>.
                 </h1>
+                
                 <p class="text-lg text-gray-200 mb-10 max-w-lg font-light leading-relaxed drop-shadow-md">
                     Κλινική Νευροψυχολογία & Γνωσιακή Συμπεριφορική Θεραπεία (CBT). Ένας ασφαλής χώρος στους Αμπελόκηπους για ουσιαστική αλλαγή.
                 </p>
@@ -182,8 +193,8 @@
                 </div>
             </div>
 
-            <!-- Right Portrait Image (Made significantly larger with max-w-[580px]) -->
-            <div class="relative reveal delay-200 hidden lg:block">
+            <!-- Right Portrait Image (Desktop Only, Pushed to the right using col-span-5) -->
+            <div class="relative reveal delay-200 hidden lg:block lg:col-span-5 lg:col-start-8">
                 <!-- Floating decorative elements -->
                 <div class="absolute -top-10 -right-10 w-32 h-32 bg-luxury-taupe/20 rounded-full blur-2xl animate-pulse-glow"></div>
                 <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse-glow" style="animation-delay: 2s;"></div>
@@ -469,17 +480,13 @@
         <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-1/2 bg-luxury-taupe/5 blur-[120px] pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <!-- Removed the Footer Logo, but kept the text and LinkedIn icon -->
             <div class="grid md:grid-cols-3 gap-16 mb-20">
                 
                 <div class="reveal">
-                    <!-- Squared footer logo -->
-                    <div class="w-32 h-32 rounded-xl border border-luxury-taupe p-2 bg-white flex items-center justify-center mb-8 shadow-glow">
-                        <img src="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/Gemini_Generated_Image_bkew7wbkew7wbkew.png" alt="Logo" class="w-full h-full object-contain rounded-lg">
-                    </div>
                     <p class="text-gray-400 font-light leading-relaxed mb-8">
                         Η επούλωση ξεκινά με ένα βήμα. Επικοινωνήστε για να ορίσουμε την πρώτη σας συνεδρία σε ένα περιβάλλον απόλυτης αποδοχής.
                     </p>
-                    <!-- Original LinkedIn icon (No invert filters, just raw image with elegant hover) -->
                     <a href="https://www.linkedin.com/in/athanasia-gkika-700072202/" target="_blank" class="inline-block hover:scale-110 hover:drop-shadow-lg transition-all duration-300">
                         <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/refs/heads/main/icons8-linkedin-480.png" alt="LinkedIn" class="w-10 h-10 object-contain">
                     </a>

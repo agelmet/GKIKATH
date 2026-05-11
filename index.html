@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="el" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Αθανασία Γκίκα | Κλινική Νευροψυχολογία & Γνωσιακή Συμπεριφορική Θεραπεία (CBT)</title>
+    <meta name="description" content="Η Αθανασία Γκίκα είναι αδειούχος Ψυχολόγος με εξειδίκευση στην Κλινική Νευροψυχολογία και τη Γνωσιακή Συμπεριφορική Θεραπεία (CBT) στους Αμπελόκηπους.">
+    
+    <link rel="icon" href="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/Gemini_Generated_Image_bkew7wbkew7wbkew.png" type="image/png">
+
+    <!-- Premium Fonts: Cormorant Garamond for elegance, Outfit for modern readability -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        luxury: {
+                            dark: '#0a0a0a',     /* Deep almost black */
+                            slate: '#1a1b1e',    /* Elegant dark slate */
+                            taupe: '#B49B85',    /* Sophisticated muted champagne/taupe */
+                            taupeLight: '#CDBEAF',
+                            pearl: '#FAFAFA',    /* Clean off-white */
+                            sand: '#F5F3EF'      /* Warm ultra-light grey */
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Outfit"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.05)',
+                        'glow': '0 0 40px -10px rgba(180, 155, 133, 0.3)',
+                    },
+                    animation: {
+                        'float': 'float 8s ease-in-out infinite',
+                        'pan': 'pan 20s linear infinite alternate',
+                        'scroll-vertical': 'scroll-vertical 40s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-15px)' },
+                        },
+                        pan: {
+                            '0%': { transform: 'scale(1.05) translate(0, 0)' },
+                            '100%': { transform: 'scale(1.1) translate(-2%, -2%)' },
+                        },
+                        'scroll-vertical': {
+                            '0%': { transform: 'translateY(0)' },
+                            '100%': { transform: 'translateY(-50%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Modern Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #B49B85; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #CDBEAF; }
+
+        /* Typography Refinements */
+        .tracking-ultra { letter-spacing: 0.2em; }
+        .text-balance { text-wrap: balance; }
+
+        /* Scroll Reveal Utility */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .delay-100 { transition-delay: 0.1s; }
+        .delay-200 { transition-delay: 0.2s; }
+        .delay-300 { transition-delay: 0.3s; }
+
+        /* Glassmorphism */
+        .glass-nav { background: rgba(250, 250, 250, 0.85); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        
+        /* Lightbox */
+        #lightbox { opacity: 0; pointer-events: none; transition: opacity 0.4s ease; backdrop-filter: blur(20px); }
+        #lightbox.active { opacity: 1; pointer-events: auto; }
+        
+        /* Vertical Marquee Mask */
+        .vertical-mask {
+            mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+        }
+
+        /* Hero Image Masking */
+        .hero-img-wrapper::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, #0a0a0a 0%, transparent 30%);
+            pointer-events: none;
+        }
+    </style>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-luxury-pearl text-luxury-slate font-sans antialiased overflow-x-hidden selection:bg-luxury-taupe selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-500 glass-nav" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="group relative flex items-center gap-4">
+                <!-- Circled, uncropped logo -->
+                <div class="w-16 h-16 rounded-full border-2 border-luxury-taupe/30 p-1 overflow-hidden bg-white shadow-lg group-hover:border-luxury-taupe transition-colors duration-500">
+                    <img src="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/Gemini_Generated_Image_bkew7wbkew7wbkew.png" alt="Αθανασία Γκίκα Logo" class="w-full h-full object-contain">
+                </div>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-10">
+                <a href="#about" class="text-sm font-medium tracking-wide hover:text-luxury-taupe transition-colors">ΠΡΟΦΙΛ</a>
+                <a href="#services" class="text-sm font-medium tracking-wide hover:text-luxury-taupe transition-colors">ΥΠΗΡΕΣΙΕΣ</a>
+                <a href="#philosophy" class="text-sm font-medium tracking-wide hover:text-luxury-taupe transition-colors">ΦΙΛΟΣΟΦΙΑ</a>
+                <a href="#space" class="text-sm font-medium tracking-wide hover:text-luxury-taupe transition-colors">ΧΩΡΟΣ</a>
+                <a href="#reviews" class="text-sm font-medium tracking-wide hover:text-luxury-taupe transition-colors">ΚΡΙΤΙΚΕΣ</a>
+                
+                <a href="https://www.doctoranytime.gr/d/Psychologos/gkika-athanasia?autobook=1&acdpid=93605&autobook-dpid=93605&utm_source=gmb&utm_medium=organic&utm_campaign=actionscenter&rwg_token=AFd1xnFeWh-kPxswhQoeZEZB1o_1pdG0eOqRMidn_HWOvE9HSJ0upm3UJKNI6MQJLPl4rALeGHZISpvAM6aBEfxV_GimC_zhKg%3D%3D" target="_blank" class="px-8 py-3 bg-luxury-dark text-white rounded-none text-sm font-medium tracking-wider hover:bg-luxury-taupe transition-all duration-300 shadow-glow">
+                    ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ
+                </a>
+            </div>
+
+            <button class="md:hidden text-luxury-dark focus:outline-none" id="mobile-menu-btn">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-luxury-pearl/95 backdrop-blur-xl shadow-xl hidden flex-col items-center py-8 space-y-6 border-t border-gray-200">
+            <a href="#about" class="text-lg font-medium mobile-link">ΠΡΟΦΙΛ</a>
+            <a href="#services" class="text-lg font-medium mobile-link">ΥΠΗΡΕΣΙΕΣ</a>
+            <a href="#philosophy" class="text-lg font-medium mobile-link">ΦΙΛΟΣΟΦΙΑ</a>
+            <a href="#space" class="text-lg font-medium mobile-link">ΧΩΡΟΣ</a>
+            <a href="https://www.doctoranytime.gr/d/Psychologos/gkika-athanasia?autobook=1&acdpid=93605&autobook-dpid=93605&utm_source=gmb&utm_medium=organic&utm_campaign=actionscenter&rwg_token=AFd1xnFeWh-kPxswhQoeZEZB1o_1pdG0eOqRMidn_HWOvE9HSJ0upm3UJKNI6MQJLPl4rALeGHZISpvAM6aBEfxV_GimC_zhKg%3D%3D" target="_blank" class="px-8 py-3 bg-luxury-dark text-white text-lg font-medium tracking-wider mt-4">ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden bg-luxury-dark">
+        <!-- Background Image with precise masking/overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/unnamed-153232.jpg" alt="Space Background" class="w-full h-full object-cover opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-r from-luxury-dark via-luxury-dark/95 to-luxury-dark/60"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-12 items-center relative z-10">
+            <!-- Left Text Content -->
+            <div class="text-left pt-10 lg:pt-0 reveal">
+                <span class="block text-luxury-taupe text-sm font-medium tracking-ultra uppercase mb-6">Αδειουχος Ψυχολογος (Αρ. Αδειας: 505404)</span>
+                <h1 class="text-5xl lg:text-7xl font-serif text-white leading-tight mb-8 text-balance">
+                    Αποκωδικοποιώντας το <span class="italic text-luxury-taupe">Παρόν</span>,<br>Σχεδιάζοντας το <span class="italic text-luxury-taupe">Μέλλον</span>.
+                </h1>
+                <p class="text-lg text-gray-400 mb-10 max-w-lg font-light leading-relaxed">
+                    Κλινική Νευροψυχολογία & Γνωσιακή Συμπεριφορική Θεραπεία (CBT). Ένας ασφαλής χώρος στους Αμπελόκηπους για ουσιαστική αλλαγή.
+                </p>
+                <div class="flex flex-wrap gap-6 items-center">
+                    <a href="https://www.doctoranytime.gr/d/Psychologos/gkika-athanasia?autobook=1&acdpid=93605&autobook-dpid=93605&utm_source=gmb&utm_medium=organic&utm_campaign=actionscenter&rwg_token=AFd1xnFeWh-kPxswhQoeZEZB1o_1pdG0eOqRMidn_HWOvE9HSJ0upm3UJKNI6MQJLPl4rALeGHZISpvAM6aBEfxV_GimC_zhKg%3D%3D" target="_blank" class="px-8 py-4 bg-luxury-taupe text-white font-medium tracking-wider hover:bg-white hover:text-luxury-dark transition-all duration-500 shadow-[0_0_30px_rgba(180,155,133,0.3)]">
+                        ΕΝΑΡΞΗ ΘΕΡΑΠΕΙΑΣ
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Portrait Image -->
+            <div class="relative reveal delay-200 hidden lg:block">
+                <div class="relative w-full max-w-[480px] ml-auto hero-img-wrapper animate-float">
+                    <div class="absolute inset-0 border border-luxury-taupe/30 translate-x-4 -translate-y-4"></div>
+                    <img src="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/42424244224fa.jpg" alt="Αθανασία Γκίκα Ψυχολόγος" class="relative w-full h-auto object-cover shadow-2xl z-10 filter contrast-[1.05]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-32 px-6 bg-luxury-pearl relative">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 items-center">
+            
+            <!-- Moving Image Effect -->
+            <div class="lg:col-span-5 relative reveal">
+                <div class="aspect-[3/4] overflow-hidden shadow-2xl relative group">
+                    <div class="absolute inset-0 bg-luxury-taupe/10 group-hover:bg-transparent transition-colors duration-700 z-10 pointer-events-none"></div>
+                    <img src="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/unm1.jpg" alt="Αθανασία Γκίκα" class="w-full h-full object-cover animate-pan">
+                </div>
+                <!-- Decorative Element -->
+                <div class="absolute -bottom-8 -right-8 w-40 h-40 border border-luxury-taupe/40 z-0"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="lg:col-span-7 reveal delay-200">
+                <span class="text-luxury-taupe tracking-ultra text-xs font-bold uppercase mb-4 block">ΤΟ ΕΠΙΣΤΗΜΟΝΙΚΟ ΥΠΟΒΑΘΡΟ</span>
+                <h2 class="text-4xl lg:text-5xl font-serif text-luxury-dark mb-8">Η Αθανασία Γκίκα</h2>
+                
+                <div class="space-y-6 text-lg text-luxury-slate/80 font-light leading-relaxed">
+                    <p>
+                        Η Αθανασία Γκίκα είναι αδειούχος Ψυχολόγος (Αρ. Αδείας: 505404), με εξειδίκευση στην <strong>Κλινική Νευροψυχολογία</strong> και τη <strong>Γνωσιακή Συμπεριφορική Θεραπεία (CBT)</strong>. Διατηρεί το ιδιωτικό της γραφείο στους Αμπελόκηπους (Λεωφόρος Μεσογείων 8), ενώ παρέχει σταθερά και διαδικτυακές συνεδρίες, εξυπηρετώντας θεραπευόμενους σε όλη την Ελλάδα.
+                    </p>
+                    <p>
+                        Το επιστημονικό της υπόβαθρο διακρίνεται για την πολυμέρεια και το βάθος του. Πλαισιώνει το πτυχίο της στην Ψυχολογία με Μεταπτυχιακό τίτλο (MSc) στην Κλινική Νευροψυχολογία. Παράλληλα, παραμένει διαρκώς ενεργή ακαδημαϊκά, εμβαθύνοντας στην Γνωσιακή Συμπεριφορική αλλά και στην Ψυχοδυναμική Ψυχοθεραπεία, γεγονός που της επιτρέπει να βλέπει τον άνθρωπο σφαιρικά: από τη λειτουργία του εγκεφάλου μέχρι το βαθύτερο συναίσθημα.
+                    </p>
+                    <p>
+                        Διαθέτει σημαντική κλινική και ερευνητική εμπειρία από τη συνεργασία της με κορυφαίους οργανισμούς υγείας, όπως το Γ.Ν.Α. «Ο Ευαγγελισμός» και οι δομές «Άκτιος Α.Ε.».
+                    </p>
+                    <blockquote class="border-l-2 border-luxury-taupe pl-6 py-2 my-8 text-xl font-serif text-luxury-dark italic">
+                        "Η ψυχοθεραπεία δεν είναι απλώς μια ανάλυση συμπτωμάτων, αλλά μια ουσιαστική ευκαιρία να ανακουφιστείτε από το βάρος που συχνά κουβαλάτε σιωπηλά."
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-32 px-6 bg-luxury-sand relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <span class="text-luxury-taupe tracking-ultra text-xs font-bold uppercase mb-4 block">ΕΞΕΙΔΙΚΕΥΣΗ</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-luxury-dark mb-6">Υπηρεσίες Θεραπείας</h2>
+                <div class="w-16 h-px bg-luxury-taupe mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="bg-white p-10 reveal border border-luxury-taupe/10 hover:border-luxury-taupe/40 transition-colors duration-500 group">
+                    <i data-lucide="brain-circuit" class="w-8 h-8 text-luxury-taupe mb-8 group-hover:scale-110 transition-transform duration-500"></i>
+                    <h3 class="text-2xl font-serif text-luxury-dark mb-4">Άγχος, Κατάθλιψη & Φοβίες (CBT)</h3>
+                    <p class="text-luxury-slate/70 font-light leading-relaxed mb-6">
+                        Όταν η καταθλιπτική διάθεση, οι εμμονικοί φόβοι και το διαρκές άγχος σκοτεινιάζουν την καθημερινότητα, η CBT αποτελεί το πιο στοχευμένο εργαλείο. Στόχος η άμεση μείωση συμπτωμάτων και η ανάκτηση του ελέγχου.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs font-medium tracking-wider text-luxury-taupe uppercase">
+                        <span>• Άγχος (50')</span>
+                        <span>• Κατάθλιψη (50')</span>
+                        <span>• Φοβίες</span>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-10 reveal delay-100 border border-luxury-taupe/10 hover:border-luxury-taupe/40 transition-colors duration-500 group">
+                    <i data-lucide="shield" class="w-8 h-8 text-luxury-taupe mb-8 group-hover:scale-110 transition-transform duration-500"></i>
+                    <h3 class="text-2xl font-serif text-luxury-dark mb-4">Γυναικεία Ενδυνάμωση & Τραύμα</h3>
+                    <p class="text-luxury-slate/70 font-light leading-relaxed mb-6">
+                        Ένα απόλυτα ασφαλές, εχέμυθο καταφύγιο. Εξειδικευμένη υποστήριξη για την επούλωση τραύματος (ενδοοικογενειακή βία), επαναδιεκδίκηση ορίων και χτίσιμο θετικής αυτοεκτίμησης.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs font-medium tracking-wider text-luxury-taupe uppercase">
+                        <span>• Ενδυνάμωση (50')</span>
+                        <span>• Αυτοεκτίμηση</span>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-10 reveal border border-luxury-taupe/10 hover:border-luxury-taupe/40 transition-colors duration-500 group">
+                    <i data-lucide="users" class="w-8 h-8 text-luxury-taupe mb-8 group-hover:scale-110 transition-transform duration-500"></i>
+                    <h3 class="text-2xl font-serif text-luxury-dark mb-4">Συμβουλευτική Σχέσεων & Εφηβεία</h3>
+                    <p class="text-luxury-slate/70 font-light leading-relaxed mb-6">
+                        Διερεύνηση τρόπων επικοινωνίας για συντροφικές σχέσεις ή οικογενειακές συγκρούσεις. Μαθαίνουμε να θέτουμε όρια και να χτίζουμε δεσμούς που εξελίσσουν.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs font-medium tracking-wider text-luxury-taupe uppercase">
+                        <span>• Σχέσεις (50')</span>
+                        <span>• Εφηβεία</span>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white p-10 reveal delay-100 border border-luxury-taupe/10 hover:border-luxury-taupe/40 transition-colors duration-500 group">
+                    <i data-lucide="monitor" class="w-8 h-8 text-luxury-taupe mb-8 group-hover:scale-110 transition-transform duration-500"></i>
+                    <h3 class="text-2xl font-serif text-luxury-dark mb-4">Διαδικτυακή Ψυχοθεραπεία (Online)</h3>
+                    <p class="text-luxury-slate/70 font-light leading-relaxed mb-6">
+                        Με απόλυτο σεβασμό στο πρόγραμμά σας, οι συνεδρίες παρέχονται δια ζώσης (Αμπελόκηποι) ή διαδικτυακά, διατηρώντας ακέραιη τη ζεστασιά και την επιστημονική ποιότητα.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs font-medium tracking-wider text-luxury-taupe uppercase">
+                        <span>• Βιντεοκλήση (50')</span>
+                        <span>• Δια Ζώσης</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="py-32 px-6 bg-luxury-dark text-white relative">
+        <div class="max-w-4xl mx-auto text-center mb-20 reveal">
+            <span class="text-luxury-taupe tracking-ultra text-xs font-bold uppercase mb-4 block">ΤΟ ΒΑΡΟΣ ΤΗΣ ΣΙΩΠΗΣ</span>
+            <h2 class="text-4xl md:text-5xl font-serif mb-6">Οι Τρεις Σταθμοί της Διαδρομής</h2>
+            <p class="text-gray-400 font-light text-lg">Πολλοί άνθρωποι φτάνουν στο γραφείο έχοντας περάσει χρόνια παλεύοντας μόνοι τους. Η θεραπεία δεν είναι παθητική διαδικασία, αλλά ένα ενεργό ταξίδι.</p>
+        </div>
+
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 relative">
+            <!-- Connecting Line -->
+            <div class="hidden md:block absolute top-12 left-10 right-10 h-px bg-luxury-taupe/20"></div>
+
+            <div class="relative reveal z-10">
+                <div class="w-24 h-24 bg-luxury-slate border border-luxury-taupe/30 rounded-full flex items-center justify-center text-3xl font-serif text-luxury-taupe mx-auto mb-8 shadow-glow">I</div>
+                <h4 class="text-2xl font-serif text-center mb-4">Η Κατανόηση</h4>
+                <p class="text-gray-400 text-center font-light leading-relaxed">
+                    Πριν αλλάξουμε κάτι, πρέπει να καταλάβουμε γιατί υπάρχει. Κατανοούμε πώς ο εγκέφαλός σας αντιδρά στο στρες, ανακαλύπτοντας τις ρίζες των συμπεριφορών σας χωρίς κριτική και ενοχές.
+                </p>
+            </div>
+
+            <div class="relative reveal delay-100 z-10">
+                <div class="w-24 h-24 bg-luxury-slate border border-luxury-taupe/30 rounded-full flex items-center justify-center text-3xl font-serif text-luxury-taupe mx-auto mb-8 shadow-glow">II</div>
+                <h4 class="text-2xl font-serif text-center mb-4">Η Αποδοχή</h4>
+                <p class="text-gray-400 text-center font-light leading-relaxed">
+                    Η μεγαλύτερη ανακούφιση. Στο δωμάτιο της θεραπείας επιτρέπεται να είστε ευάλωτοι. Αντικρίζουμε την πραγματικότητα με ειλικρίνεια, βάζοντας τέλος στον εσωτερικό πόλεμο που σας εξαντλεί.
+                </p>
+            </div>
+
+            <div class="relative reveal delay-200 z-10">
+                <div class="w-24 h-24 bg-luxury-slate border border-luxury-taupe/30 rounded-full flex items-center justify-center text-3xl font-serif text-luxury-taupe mx-auto mb-8 shadow-glow">III</div>
+                <h4 class="text-2xl font-serif text-center mb-4">Η Αλλαγή</h4>
+                <p class="text-gray-400 text-center font-light leading-relaxed">
+                    Περνάμε στη δράση με τη δύναμη της CBT. Σχεδιάζουμε πρακτικά βήματα, αντικαθιστούμε τα μοτίβα που σας κρατούν πίσω και χτίζουμε μια νέα, σταθερή ψυχική ανθεκτικότητα.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Space Gallery Section -->
+    <section id="space" class="py-32 px-6 bg-luxury-pearl">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal">
+                <div class="max-w-2xl">
+                    <span class="text-luxury-taupe tracking-ultra text-xs font-bold uppercase mb-4 block">ΤΟ ΠΕΡΙΒΑΛΛΟΝ</span>
+                    <h2 class="text-4xl md:text-5xl font-serif text-luxury-dark mb-4">Ο Χώρος Μας</h2>
+                    <p class="text-luxury-slate/70 font-light">Σχεδιασμένος για να αποπνέει ασφάλεια, ηρεμία και απόλυτη ιδιωτικότητα. Λεωφόρος Μεσογείων 8, Αμπελόκηποι.</p>
+                </div>
+            </div>
+
+            <!-- Masonry Grid ensuring images are true to size relative to width, NOT cropped -->
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+                <img src="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/unm2.jpg" alt="Space" class="w-full h-auto cursor-zoom-in reveal hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)">
+                <img src="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/unm3.jpg" alt="Space" class="w-full h-auto cursor-zoom-in reveal delay-100 hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)">
+                <img src="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/unm4.jpg" alt="Space" class="w-full h-auto cursor-zoom-in reveal delay-200 hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)">
+                <img src="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/unnamed-134.jpg" alt="Space" class="w-full h-auto cursor-zoom-in reveal hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)">
+                <img src="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/unnamed-153232.jpg" alt="Space" class="w-full h-auto cursor-zoom-in reveal delay-100 hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)">
+                <img src="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/unnamed-343412.jpg" alt="Space" class="w-full h-auto cursor-zoom-in reveal delay-200 hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)">
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section (Vertical Marquee) -->
+    <section id="reviews" class="py-32 bg-luxury-sand border-y border-luxury-taupe/10 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            
+            <div class="reveal">
+                <span class="text-luxury-taupe tracking-ultra text-xs font-bold uppercase mb-4 block">ΕΜΠΕΙΡΙΕΣ</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-luxury-dark mb-6">Η Εμπιστοσύνη Σας</h2>
+                <p class="text-luxury-slate/70 font-light text-lg mb-10">Η μεγαλύτερη απόδειξη της δουλειάς μας είναι η ανακούφιση και η πρόοδος των θεραπευόμενων μας. Διαβάστε τις εμπειρίες τους όπως καταγράφηκαν.</p>
+                <a href="https://www.doctoranytime.gr/d/Psychologos/gkika-athanasia" target="_blank" class="inline-flex items-center border border-luxury-dark px-6 py-3 hover:bg-luxury-dark hover:text-white transition-colors duration-300">
+                    <span class="text-sm font-bold tracking-wider mr-4">ΠΕΡΙΣΣΟΤΕΡΑ ΣΤΟ</span>
+                    <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/lgoodoc.jpg" alt="Doctoranytime" class="h-5 mix-blend-multiply">
+                </a>
+            </div>
+
+            <!-- Vertical Scrolling Reviews -->
+            <div class="h-[600px] overflow-hidden relative vertical-mask reveal delay-200">
+                <div class="flex flex-col space-y-6 animate-scroll-vertical group hover:[animation-play-state:paused]">
+                    
+                    <!-- Dynamic Generation of Reviews -->
+                    <script>
+                        const reviews = [
+                            { name: 'Γεωργία', date: '31 Οκτωβρίου 2024', rev: 1, text: 'Εξαιρετική ψυχολόγος, με συνέπεια στα ραντεβού της. Η καθοδήγηση της μου έχει φανεί πολύ χρήσιμη.' },
+                            { name: 'Χρηστος', date: '26 Οκτωβρίου 2024', rev: 1, text: 'Εξαιρετική επαγγελματίας πλήρως καταρτισμένη. Φιλική και κατανοητική. Ο χώρος πολυ όμορφος και ζεστός. Όλα αυτα σε κάνουν αμέσως να νιώσεις άνετα και οικεία.' },
+                            { name: 'Ισιδωρα', date: '25 Οκτωβρίου 2024', rev: 1, text: 'Ξεκινησα θεραπειες με την Αθανασια γιατι ειχα καποιες δυσκολιες και μπορω να πω πως απο τοτε βλεπω σοβαρη βελτιωση στην καθημερινοτητα μου. Αν ψαχνετε επαγγελματια ψυχολογο τη συνιστώ.' },
+                            { name: 'Αλεξάνδρα', date: '25 Οκτωβρίου 2024', rev: 1, text: 'Από την πρώτη μας συνεδρία, έδειξε ιδιαίτερο ενδιαφέρον για τα ζητήματά μου, κάνοντάς με να νιώσω άνετα και ασφαλής. Χωρίς ποτέ να αισθανθώ πίεση ή κριτική. Σας ευχαριστώ για όλα !!' },
+                            { name: 'Giorgos', date: '24 Οκτωβρίου 2024', rev: 1, text: 'Εξαιρετική επαγγελματίας, ενιωσα απευθειας οικειοτητα και εμπιστοσυνη.' },
+                            { name: 'Αναστασία', date: '24 Οκτωβρίου 2024', rev: 1, text: 'Η Αθανασία προσέγγισε το πρόβλημά μου με επαγγελματισμό. Με υπομονή και επιμονή κατάφερα να αλλάξω τρόπο σκέψης και να μην φοβάμαι να ζητάω βοήθεια!' },
+                            { name: 'Dimitris', date: '24 Οκτωβρίου 2024', rev: 1, text: 'Εξαιρετική ψυχολόγος. Δημιουργεί ένα άνετο και ασφαλές περιβάλλον. Είναι πολύ ευγενική και δείχνει ότι την ενδιαφέρει πραγματικά να βοηθήσει.' },
+                            { name: 'Αθανασια', date: '23 Οκτωβρίου 2024', rev: 1, text: 'Ο χώρος της ήταν ζεστός και φιλόξενος. Η ίδια, με τον προσιτό και γλυκό της τρόπο, με έκανε να νιώσω άνετα. Ένιωσα ότι μπορούσα να είμαι ο εαυτός μου.' },
+                            { name: 'Χρήστος', date: '23 Οκτωβρίου 2024', rev: 1, text: 'Το περιβάλλον δημιουργούσε την τέλεια ατμόσφαιρα για να ανοιχτείς. Η ίδια η Αθανασία ήταν ιδιαίτερα προσιτή, με γλυκύτητα και ενσυναίσθηση.' },
+                            { name: 'Ελένη', date: '19 Οκτωβρίου 2024', rev: 1, text: 'Η Κα. Γκίκα είναι επαγγελματίας, ευγενική και πάντα εύστοχη στις μεθόδους που ακολουθεί. Ο χώρος είναι ζεστός. Τη συστήνω ανεπιφύλακτα!' },
+                            { name: 'Vasiliki', date: '19 Οκτωβρίου 2024', rev: 1, text: 'Από την πρώτη συνεδρία ένιωσα άνετα. Διαθέτει βαθιές γνώσεις και καταφέρνει να συνδυάζει τη θεωρία με την πράξη. Τη συστήνω ανεπιφύλακτα.' }
+                        ];
+
+                        // Duplicate array to create seamless loop
+                        const loopReviews = [...reviews, ...reviews];
+
+                        loopReviews.forEach(r => {
+                            document.write(`
+                                <div class="bg-white p-8 border border-luxury-taupe/10 shadow-sm relative">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <div>
+                                            <div class="flex gap-1 text-luxury-taupe mb-2">
+                                                ${'<i data-lucide="star" class="w-4 h-4 fill-current"></i>'.repeat(5)}
+                                            </div>
+                                            <span class="font-bold font-serif text-xl text-luxury-dark">10.0 / 10</span>
+                                        </div>
+                                        <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/lgoodoc.jpg" class="h-6 object-contain opacity-80" alt="DoctorAnytime">
+                                    </div>
+                                    <p class="text-luxury-slate/80 font-light leading-relaxed mb-6">"${r.text}"</p>
+                                    <div class="border-t border-luxury-sand pt-4 flex justify-between items-center text-xs text-luxury-slate/60">
+                                        <span class="font-bold tracking-wider uppercase text-luxury-dark">${r.name}</span>
+                                        <span>${r.date} • ${r.rev} αξιολόγηση</span>
+                                    </div>
+                                </div>
+                            `);
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-luxury-dark text-white pt-24 pb-12 border-t border-luxury-taupe/20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-16 mb-20">
+                
+                <div class="reveal">
+                    <img src="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/Gemini_Generated_Image_bkew7wbkew7wbkew.png" alt="Logo" class="w-20 h-20 rounded-full border border-luxury-taupe p-1 bg-white object-contain mb-6">
+                    <p class="text-gray-400 font-light leading-relaxed mb-8">
+                        Η επούλωση ξεκινά με ένα βήμα. Επικοινωνήστε για να ορίσουμε την πρώτη σας συνεδρία σε ένα περιβάλλον απόλυτης αποδοχής.
+                    </p>
+                    <a href="https://www.linkedin.com/in/athanasia-gkika-700072202/" target="_blank" class="inline-block hover:opacity-80 transition-opacity">
+                        <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/refs/heads/main/icons8-linkedin-480.png" alt="LinkedIn" class="w-8 h-8 filter brightness-0 invert">
+                    </a>
+                </div>
+
+                <div class="reveal delay-100">
+                    <h4 class="text-lg font-serif text-luxury-taupe mb-6 tracking-ultra uppercase">Στοιχεια Επικοινωνιας</h4>
+                    <ul class="space-y-4 text-gray-400 font-light">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-luxury-taupe shrink-0 mt-1"></i>
+                            <span>Λεωφόρος Μεσογείων 8,<br>Αμπελόκηποι, Αττική</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-luxury-taupe shrink-0"></i>
+                            <a href="tel:+306978165250" class="hover:text-white transition-colors">697 816 5250</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="reveal delay-200">
+                    <h4 class="text-lg font-serif text-luxury-taupe mb-6 tracking-ultra uppercase">Ωραριο</h4>
+                    <ul class="space-y-4 text-gray-400 font-light">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="clock" class="w-5 h-5 text-luxury-taupe shrink-0"></i>
+                            <span>Δευτέρα - Σάββατο</span>
+                        </li>
+                        <li class="pl-8 text-sm text-white">Κατόπιν Ραντεβού</li>
+                    </ul>
+                    <div class="mt-8">
+                        <a href="https://www.doctoranytime.gr/d/Psychologos/gkika-athanasia" target="_blank" class="inline-flex items-center bg-white text-luxury-dark px-6 py-2 text-sm font-bold tracking-wider hover:bg-luxury-taupe hover:text-white transition-colors duration-300">
+                            DOCTORANYTIME
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500 font-light">
+                <p>© 2026 Αθανασία Γκίκα. Με την επιφύλαξη παντός δικαιώματος.</p>
+                <p>Designed by <a href="https://advonmedia.com" target="_blank" rel="noopener" class="text-luxury-taupe hover:text-white transition-colors font-medium">Advon Media</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fullscreen Image Lightbox -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-luxury-dark/95 flex items-center justify-center cursor-zoom-out" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white hover:text-luxury-taupe transition-colors">
+            <i data-lucide="x" class="w-10 h-10"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Enlarged Space View" class="max-w-[95vw] max-h-[95vh] object-contain shadow-2xl cursor-default" onclick="event.stopPropagation()">
+    </div>
+
+    <script>
+        // Initialize Icons (Including dynamic ones added in script)
+        lucide.createIcons();
+        setTimeout(() => lucide.createIcons(), 100);
+
+        // Mobile Menu Logic
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2', 'shadow-sm');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2', 'shadow-sm');
+            }
+        });
+
+        // Scroll Reveal Animation Builder
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, { root: null, rootMargin: '0px', threshold: 0.15 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Lightbox Logic
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(src) {
+            lightboxImg.src = src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            setTimeout(() => {
+                lightboxImg.src = '';
+                document.body.style.overflow = '';
+            }, 400);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>

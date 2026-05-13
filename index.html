@@ -160,7 +160,6 @@
             <div class="absolute inset-0 bg-gradient-to-r from-luxury-dark via-luxury-dark/70 to-transparent"></div>
         </div>
 
-        <!-- Changed grid columns to 12 to allow pushing the image further right -->
         <div class="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-12 gap-8 items-center relative z-10">
             
             <!-- Left Text Content -->
@@ -177,7 +176,6 @@
                     </div>
                 </div>
 
-                <!-- Text sizing adjusted to text-4xl on mobile to prevent cropping -->
                 <h1 class="text-4xl sm:text-5xl lg:text-7xl font-serif text-white leading-tight mb-8 text-balance drop-shadow-2xl break-words sm:break-normal">
                     Αποκωδικοποιώντας το <span class="italic text-luxury-taupe relative inline-block">Παρόν<span class="absolute -bottom-2 left-0 w-full h-px bg-luxury-taupe opacity-50"></span></span>,<br>Σχεδιάζοντας το <span class="italic text-luxury-taupe">Μέλλον</span>.
                 </h1>
@@ -214,8 +212,8 @@
     <section id="about" class="py-32 px-6 bg-luxury-pearl relative">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 items-center">
             
-            <!-- Moving Image Effect -->
-            <div class="lg:col-span-5 relative reveal">
+            <!-- Moving Image Effect (Hidden on Mobile, Visible on Desktop) -->
+            <div class="hidden lg:block lg:col-span-5 relative reveal">
                 <div class="aspect-[3/4] overflow-hidden shadow-floating relative group hover-lift border border-luxury-taupe/10">
                     <div class="absolute inset-0 bg-luxury-dark/10 group-hover:bg-transparent transition-colors duration-700 z-10 pointer-events-none"></div>
                     <img src="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/unm1.jpg" alt="Αθανασία Γκίκα" class="w-full h-full object-cover animate-hero-pan">
@@ -231,6 +229,15 @@
                 </span>
                 <h2 class="text-4xl lg:text-5xl font-serif text-luxury-dark mb-8">Η Αθανασία Γκίκα</h2>
                 
+                <!-- Moving Image Effect (Visible ONLY on Mobile, right after title) -->
+                <div class="block lg:hidden relative w-full max-w-[320px] mx-auto mb-10">
+                    <div class="relative z-10 aspect-[3/4] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-luxury-taupe/20 bg-luxury-dark/5">
+                        <img src="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/unm1.jpg" alt="Αθανασία Γκίκα" class="w-full h-full object-cover animate-hero-pan">
+                    </div>
+                    <!-- Decorative Element -->
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 border border-luxury-taupe/40 z-0 animate-float-slow"></div>
+                </div>
+
                 <div class="space-y-6 text-lg text-luxury-slate/80 font-light leading-relaxed">
                     <p>
                         Η Αθανασία Γκίκα είναι αδειούχος Ψυχολόγος (Αρ. Αδείας: 505404), με εξειδίκευση στην <strong>Κλινική Νευροψυχολογία</strong> και τη <strong>Γνωσιακή Συμπεριφορική Θεραπεία (CBT)</strong>. Διατηρεί το ιδιωτικό της γραφείο στους Αμπελόκηπους (Λεωφόρος Μεσογείων 8), ενώ παρέχει σταθερά και διαδικτυακές συνεδρίες, εξυπηρετώντας θεραπευόμενους σε όλη την Ελλάδα.
@@ -254,7 +261,6 @@
 
     <!-- Services Section -->
     <section id="services" class="py-32 px-6 bg-luxury-sand relative overflow-hidden">
-        <!-- Floating abstract bg circles -->
         <div class="absolute top-0 right-0 w-[40vw] h-[40vw] bg-white rounded-full blur-[100px] opacity-50 pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 w-[30vw] h-[30vw] bg-luxury-taupe/10 rounded-full blur-[80px] pointer-events-none"></div>
 
@@ -267,7 +273,6 @@
 
             <div class="grid md:grid-cols-2 gap-8">
                 
-                <!-- Service 1 -->
                 <div class="glass-card hover-lift p-10 reveal group cursor-default">
                     <div class="w-16 h-16 bg-luxury-pearl rounded-full flex items-center justify-center mb-8 border border-luxury-taupe/20 group-hover:bg-luxury-taupe group-hover:border-luxury-taupe transition-colors duration-500 shadow-sm">
                         <i data-lucide="brain-circuit" class="w-8 h-8 text-luxury-taupe group-hover:text-white transition-colors duration-500"></i>
@@ -283,7 +288,6 @@
                     </div>
                 </div>
 
-                <!-- Service 2 -->
                 <div class="glass-card hover-lift p-10 reveal delay-100 group cursor-default">
                     <div class="w-16 h-16 bg-luxury-pearl rounded-full flex items-center justify-center mb-8 border border-luxury-taupe/20 group-hover:bg-luxury-taupe group-hover:border-luxury-taupe transition-colors duration-500 shadow-sm">
                         <i data-lucide="shield" class="w-8 h-8 text-luxury-taupe group-hover:text-white transition-colors duration-500"></i>
@@ -298,7 +302,6 @@
                     </div>
                 </div>
 
-                <!-- Service 3 -->
                 <div class="glass-card hover-lift p-10 reveal group cursor-default">
                     <div class="w-16 h-16 bg-luxury-pearl rounded-full flex items-center justify-center mb-8 border border-luxury-taupe/20 group-hover:bg-luxury-taupe group-hover:border-luxury-taupe transition-colors duration-500 shadow-sm">
                         <i data-lucide="users" class="w-8 h-8 text-luxury-taupe group-hover:text-white transition-colors duration-500"></i>
@@ -313,7 +316,6 @@
                     </div>
                 </div>
 
-                <!-- Service 4 -->
                 <div class="glass-card hover-lift p-10 reveal delay-100 group cursor-default">
                     <div class="w-16 h-16 bg-luxury-pearl rounded-full flex items-center justify-center mb-8 border border-luxury-taupe/20 group-hover:bg-luxury-taupe group-hover:border-luxury-taupe transition-colors duration-500 shadow-sm">
                         <i data-lucide="monitor" class="w-8 h-8 text-luxury-taupe group-hover:text-white transition-colors duration-500"></i>
@@ -343,7 +345,6 @@
         </div>
 
         <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 relative z-10">
-            <!-- Glowing Connecting Line -->
             <div class="hidden md:block absolute top-12 left-[15%] right-[15%] h-[2px] bg-gradient-to-r from-transparent via-luxury-taupe to-transparent opacity-30 shadow-glow"></div>
 
             <div class="relative reveal group">
@@ -383,7 +384,6 @@
                 </div>
             </div>
 
-            <!-- Masonry Grid ensuring images are true to size relative to width, NOT cropped. Added hover effects -->
             <div class="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
                 <div class="overflow-hidden rounded-md shadow-sm hover:shadow-floating transition-shadow duration-500 group reveal">
                     <img src="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/unm2.jpg" alt="Space" class="w-full h-auto cursor-zoom-in group-hover:scale-105 transition-transform duration-700" onclick="openLightbox(this.src)">
@@ -407,7 +407,7 @@
         </div>
     </section>
 
-    <!-- Reviews Section (Vertical Marquee) -->
+    <!-- Reviews Section -->
     <section id="reviews" class="py-32 bg-luxury-sand border-y border-luxury-taupe/10 overflow-hidden relative">
         <div class="absolute right-0 top-0 w-1/2 h-full bg-white/40 skew-x-12 transform translate-x-32 z-0"></div>
 
@@ -429,7 +429,6 @@
             <div class="h-[650px] overflow-hidden relative vertical-mask reveal delay-200">
                 <div class="flex flex-col space-y-6 animate-scroll-vertical group hover:[animation-play-state:paused] pb-6">
                     
-                    <!-- Dynamic Generation of Reviews -->
                     <script>
                         const reviews = [
                             { name: 'Γεωργία', date: '31 Οκτωβρίου 2024', rev: 1, text: 'Εξαιρετική ψυχολόγος, με συνέπεια στα ραντεβού της. Η καθοδήγηση της μου έχει φανεί πολύ χρήσιμη.' },
@@ -445,7 +444,6 @@
                             { name: 'Vasiliki', date: '19 Οκτωβρίου 2024', rev: 1, text: 'Από την πρώτη συνεδρία ένιωσα άνετα. Διαθέτει βαθιές γνώσεις και καταφέρνει να συνδυάζει τη θεωρία με την πράξη. Τη συστήνω ανεπιφύλακτα.' }
                         ];
 
-                        // Duplicate array to create seamless loop
                         const loopReviews = [...reviews, ...reviews];
 
                         loopReviews.forEach(r => {
@@ -476,11 +474,9 @@
 
     <!-- Footer -->
     <footer class="bg-luxury-dark text-white pt-24 pb-12 border-t border-luxury-taupe/20 relative overflow-hidden">
-        <!-- Abstract Footer Glow -->
         <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-1/2 bg-luxury-taupe/5 blur-[120px] pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <!-- Removed the Footer Logo, but kept the text and LinkedIn icon -->
             <div class="grid md:grid-cols-3 gap-16 mb-20">
                 
                 <div class="reveal">
@@ -561,7 +557,7 @@
             });
         });
 
-        // Navbar Scroll Effect (Size reduction on scroll for elegance)
+        // Navbar Scroll Effect
         const navbar = document.getElementById('navbar');
         const navLogo = document.getElementById('nav-logo-wrapper');
         

@@ -24,12 +24,12 @@
                 extend: {
                     colors: {
                         luxury: {
-                            dark: '#0a0a0a',     /* Deep almost black */
-                            slate: '#1a1b1e',    /* Elegant dark slate */
-                            taupe: '#B49B85',    /* Sophisticated muted champagne/taupe */
-                            taupeLight: '#CDBEAF',
-                            pearl: '#FAFAFA',    /* Clean off-white */
-                            sand: '#F5F3EF'      /* Warm ultra-light grey */
+                            dark: '#231F1C',     /* Deep warm earthy umber (softer than black) */
+                            slate: '#362F2B',    /* Earthy dark brown/slate */
+                            taupe: '#B49B85',    /* Sophisticated muted earthy taupe */
+                            taupeLight: '#D3C5B7', /* Soft warm beige */
+                            pearl: '#FBF9F6',    /* Warm off-white / Ivory */
+                            sand: '#F4EFEA'      /* Warm earthy sand */
                         }
                     },
                     fontFamily: {
@@ -40,7 +40,7 @@
                         'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.05)',
                         'glow': '0 0 40px -5px rgba(180, 155, 133, 0.4)',
                         'glow-lg': '0 0 60px -10px rgba(180, 155, 133, 0.6)',
-                        'floating': '0 25px 50px -12px rgba(0, 0, 0, 0.15)',
+                        'floating': '0 25px 50px -12px rgba(35, 31, 28, 0.15)',
                     },
                     animation: {
                         'float': 'float 8s ease-in-out infinite',
@@ -75,9 +75,9 @@
     <style>
         /* Modern Scrollbar */
         ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-track { background: #231F1C; }
         ::-webkit-scrollbar-thumb { background: #B49B85; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #CDBEAF; }
+        ::-webkit-scrollbar-thumb:hover { background: #D3C5B7; }
 
         /* Typography Refinements */
         .tracking-ultra { letter-spacing: 0.25em; }
@@ -91,7 +91,7 @@
         .delay-300 { transition-delay: 0.3s; }
 
         /* Glassmorphism */
-        .glass-nav { background: rgba(250, 250, 250, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .glass-nav { background: rgba(251, 249, 246, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.05); }
         .glass-card { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.5); }
         
         /* Lightbox */
@@ -118,7 +118,7 @@
     <nav class="fixed w-full z-50 transition-all duration-500 glass-nav" id="navbar">
         <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
             <a href="#" class="group relative flex items-center gap-4 py-2">
-                <!-- Squared Logo (Elegant slightly rounded corners) -->
+                <!-- Squared Logo -->
                 <div id="nav-logo-wrapper" class="w-24 h-24 md:w-28 md:h-28 rounded-xl border-2 border-transparent bg-white shadow-lg p-2 overflow-hidden transition-all duration-500 group-hover:shadow-glow-lg group-hover:border-luxury-taupe group-hover:scale-105 flex items-center justify-center relative z-10">
                     <img src="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/Gemini_Generated_Image_bkew7wbkew7wbkew.png" alt="Αθανασία Γκίκα Logo" class="w-full h-full object-contain drop-shadow-sm">
                 </div>
@@ -168,7 +168,7 @@
                     Αδειουχος Ψυχολογος (Αρ. Αδειας: 505404)
                 </span>
 
-                <!-- Mobile Portrait Image (Appears ONLY on Mobile right after the badge) -->
+                <!-- Mobile Portrait Image -->
                 <div class="block lg:hidden w-full max-w-[320px] mb-10 relative animate-float self-center sm:self-start">
                     <div class="absolute inset-0 border border-luxury-taupe/50 translate-x-4 -translate-y-4"></div>
                     <div class="relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] bg-luxury-dark/10">
@@ -191,14 +191,12 @@
                 </div>
             </div>
 
-            <!-- Right Portrait Image (Desktop Only, Pushed to the right using col-span-5) -->
+            <!-- Right Portrait Image -->
             <div class="relative reveal delay-200 hidden lg:block lg:col-span-5 lg:col-start-8">
-                <!-- Floating decorative elements -->
                 <div class="absolute -top-10 -right-10 w-32 h-32 bg-luxury-taupe/20 rounded-full blur-2xl animate-pulse-glow"></div>
                 <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse-glow" style="animation-delay: 2s;"></div>
                 
                 <div class="relative w-full max-w-[580px] ml-auto animate-float">
-                    <!-- Offset elegant frame -->
                     <div class="absolute inset-0 border border-luxury-taupe/50 translate-x-6 -translate-y-6 transition-transform duration-700 hover:translate-x-3 hover:-translate-y-3"></div>
                     <div class="relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] bg-luxury-dark/10">
                         <img src="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/42424244224fa.jpg" alt="Αθανασία Γκίκα Ψυχολόγος" class="relative w-full h-auto object-cover z-10 filter contrast-[1.05] hover:scale-105 transition-transform duration-700">
@@ -212,13 +210,12 @@
     <section id="about" class="py-32 px-6 bg-luxury-pearl relative">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 items-center">
             
-            <!-- Moving Image Effect (Hidden on Mobile, Visible on Desktop) -->
+            <!-- Moving Image Effect (Desktop) -->
             <div class="hidden lg:block lg:col-span-5 relative reveal">
                 <div class="aspect-[3/4] overflow-hidden shadow-floating relative group hover-lift border border-luxury-taupe/10">
                     <div class="absolute inset-0 bg-luxury-dark/10 group-hover:bg-transparent transition-colors duration-700 z-10 pointer-events-none"></div>
                     <img src="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/unm1.jpg" alt="Αθανασία Γκίκα" class="w-full h-full object-cover animate-hero-pan">
                 </div>
-                <!-- Decorative Element -->
                 <div class="absolute -bottom-8 -right-8 w-40 h-40 border border-luxury-taupe/40 z-0 animate-float-slow"></div>
             </div>
 
@@ -229,12 +226,11 @@
                 </span>
                 <h2 class="text-4xl lg:text-5xl font-serif text-luxury-dark mb-8">Η Αθανασία Γκίκα</h2>
                 
-                <!-- Moving Image Effect (Visible ONLY on Mobile, right after title) -->
+                <!-- Moving Image Effect (Mobile) -->
                 <div class="block lg:hidden relative w-full max-w-[320px] mx-auto mb-10">
                     <div class="relative z-10 aspect-[3/4] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-luxury-taupe/20 bg-luxury-dark/5">
                         <img src="https://raw.githubusercontent.com/agelmet/GKIKATH/refs/heads/main/unm1.jpg" alt="Αθανασία Γκίκα" class="w-full h-full object-cover animate-hero-pan">
                     </div>
-                    <!-- Decorative Element -->
                     <div class="absolute -bottom-6 -right-6 w-32 h-32 border border-luxury-taupe/40 z-0 animate-float-slow"></div>
                 </div>
 
@@ -259,10 +255,20 @@
         </div>
     </section>
 
+    <!-- Quote 1 Section (Bridge) -->
+    <section class="py-24 bg-luxury-sand relative overflow-hidden flex items-center justify-center border-y border-luxury-taupe/10">
+        <div class="max-w-4xl mx-auto text-center px-6 reveal">
+            <i data-lucide="quote" class="w-8 h-8 text-luxury-taupe mx-auto mb-6 opacity-50"></i>
+            <blockquote class="text-3xl md:text-5xl font-serif text-luxury-dark italic text-balance leading-relaxed">
+                "Where does a thought go when it is forgotten?"
+            </blockquote>
+        </div>
+    </section>
+
     <!-- Services Section -->
-    <section id="services" class="py-32 px-6 bg-luxury-sand relative overflow-hidden">
+    <section id="services" class="py-32 px-6 bg-luxury-pearl relative overflow-hidden">
         <div class="absolute top-0 right-0 w-[40vw] h-[40vw] bg-white rounded-full blur-[100px] opacity-50 pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 w-[30vw] h-[30vw] bg-luxury-taupe/10 rounded-full blur-[80px] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[30vw] h-[30vw] bg-luxury-taupe/5 rounded-full blur-[80px] pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto relative z-10">
             <div class="text-center mb-24 reveal">
@@ -274,7 +280,7 @@
             <div class="grid md:grid-cols-2 gap-8">
                 
                 <div class="glass-card hover-lift p-10 reveal group cursor-default">
-                    <div class="w-16 h-16 bg-luxury-pearl rounded-full flex items-center justify-center mb-8 border border-luxury-taupe/20 group-hover:bg-luxury-taupe group-hover:border-luxury-taupe transition-colors duration-500 shadow-sm">
+                    <div class="w-16 h-16 bg-luxury-sand rounded-full flex items-center justify-center mb-8 border border-luxury-taupe/20 group-hover:bg-luxury-taupe group-hover:border-luxury-taupe transition-colors duration-500 shadow-sm">
                         <i data-lucide="brain-circuit" class="w-8 h-8 text-luxury-taupe group-hover:text-white transition-colors duration-500"></i>
                     </div>
                     <h3 class="text-2xl font-serif text-luxury-dark mb-4">Άγχος, Κατάθλιψη & Φοβίες (CBT)</h3>
@@ -289,7 +295,7 @@
                 </div>
 
                 <div class="glass-card hover-lift p-10 reveal delay-100 group cursor-default">
-                    <div class="w-16 h-16 bg-luxury-pearl rounded-full flex items-center justify-center mb-8 border border-luxury-taupe/20 group-hover:bg-luxury-taupe group-hover:border-luxury-taupe transition-colors duration-500 shadow-sm">
+                    <div class="w-16 h-16 bg-luxury-sand rounded-full flex items-center justify-center mb-8 border border-luxury-taupe/20 group-hover:bg-luxury-taupe group-hover:border-luxury-taupe transition-colors duration-500 shadow-sm">
                         <i data-lucide="shield" class="w-8 h-8 text-luxury-taupe group-hover:text-white transition-colors duration-500"></i>
                     </div>
                     <h3 class="text-2xl font-serif text-luxury-dark mb-4">Γυναικεία Ενδυνάμωση & Τραύμα</h3>
@@ -303,7 +309,7 @@
                 </div>
 
                 <div class="glass-card hover-lift p-10 reveal group cursor-default">
-                    <div class="w-16 h-16 bg-luxury-pearl rounded-full flex items-center justify-center mb-8 border border-luxury-taupe/20 group-hover:bg-luxury-taupe group-hover:border-luxury-taupe transition-colors duration-500 shadow-sm">
+                    <div class="w-16 h-16 bg-luxury-sand rounded-full flex items-center justify-center mb-8 border border-luxury-taupe/20 group-hover:bg-luxury-taupe group-hover:border-luxury-taupe transition-colors duration-500 shadow-sm">
                         <i data-lucide="users" class="w-8 h-8 text-luxury-taupe group-hover:text-white transition-colors duration-500"></i>
                     </div>
                     <h3 class="text-2xl font-serif text-luxury-dark mb-4">Συμβουλευτική Σχέσεων & Εφηβεία</h3>
@@ -317,7 +323,7 @@
                 </div>
 
                 <div class="glass-card hover-lift p-10 reveal delay-100 group cursor-default">
-                    <div class="w-16 h-16 bg-luxury-pearl rounded-full flex items-center justify-center mb-8 border border-luxury-taupe/20 group-hover:bg-luxury-taupe group-hover:border-luxury-taupe transition-colors duration-500 shadow-sm">
+                    <div class="w-16 h-16 bg-luxury-sand rounded-full flex items-center justify-center mb-8 border border-luxury-taupe/20 group-hover:bg-luxury-taupe group-hover:border-luxury-taupe transition-colors duration-500 shadow-sm">
                         <i data-lucide="monitor" class="w-8 h-8 text-luxury-taupe group-hover:text-white transition-colors duration-500"></i>
                     </div>
                     <h3 class="text-2xl font-serif text-luxury-dark mb-4">Διαδικτυακή Ψυχοθεραπεία (Online)</h3>
@@ -341,7 +347,7 @@
         <div class="max-w-4xl mx-auto text-center mb-24 reveal relative z-10">
             <span class="text-luxury-taupe tracking-ultra text-xs font-bold uppercase mb-4 block">ΤΟ ΒΑΡΟΣ ΤΗΣ ΣΙΩΠΗΣ</span>
             <h2 class="text-4xl md:text-6xl font-serif mb-6">Οι Τρεις Σταθμοί της Διαδρομής</h2>
-            <p class="text-gray-400 font-light text-lg">Πολλοί άνθρωποι φτάνουν στο γραφείο έχοντας περάσει χρόνια παλεύοντας μόνοι τους. Η θεραπεία δεν είναι παθητική διαδικασία, αλλά ένα ενεργό ταξίδι.</p>
+            <p class="text-luxury-pearl/60 font-light text-lg">Πολλοί άνθρωποι φτάνουν στο γραφείο έχοντας περάσει χρόνια παλεύοντας μόνοι τους. Η θεραπεία δεν είναι παθητική διαδικασία, αλλά ένα ενεργό ταξίδι.</p>
         </div>
 
         <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 relative z-10">
@@ -350,7 +356,7 @@
             <div class="relative reveal group">
                 <div class="w-24 h-24 bg-luxury-dark border-2 border-luxury-taupe/50 rounded-full flex items-center justify-center text-3xl font-serif text-white mx-auto mb-8 group-hover:scale-110 group-hover:bg-luxury-taupe transition-all duration-500 shadow-glow">I</div>
                 <h4 class="text-2xl font-serif text-center mb-4 text-white group-hover:text-luxury-taupe transition-colors duration-300">Η Κατανόηση</h4>
-                <p class="text-gray-400 text-center font-light leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+                <p class="text-luxury-pearl/60 text-center font-light leading-relaxed group-hover:text-white transition-colors duration-300">
                     Πριν αλλάξουμε κάτι, πρέπει να καταλάβουμε γιατί υπάρχει. Κατανοούμε πώς ο εγκέφαλός σας αντιδρά στο στρες, ανακαλύπτοντας τις ρίζες των συμπεριφορών σας χωρίς κριτική και ενοχές.
                 </p>
             </div>
@@ -358,7 +364,7 @@
             <div class="relative reveal delay-100 group">
                 <div class="w-24 h-24 bg-luxury-dark border-2 border-luxury-taupe/50 rounded-full flex items-center justify-center text-3xl font-serif text-white mx-auto mb-8 group-hover:scale-110 group-hover:bg-luxury-taupe transition-all duration-500 shadow-glow">II</div>
                 <h4 class="text-2xl font-serif text-center mb-4 text-white group-hover:text-luxury-taupe transition-colors duration-300">Η Αποδοχή</h4>
-                <p class="text-gray-400 text-center font-light leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+                <p class="text-luxury-pearl/60 text-center font-light leading-relaxed group-hover:text-white transition-colors duration-300">
                     Η μεγαλύτερη ανακούφιση. Στο δωμάτιο της θεραπείας επιτρέπεται να είστε ευάλωτοι. Αντικρίζουμε την πραγματικότητα με ειλικρίνεια, βάζοντας τέλος στον εσωτερικό πόλεμο που σας εξαντλεί.
                 </p>
             </div>
@@ -366,7 +372,7 @@
             <div class="relative reveal delay-200 group">
                 <div class="w-24 h-24 bg-luxury-dark border-2 border-luxury-taupe/50 rounded-full flex items-center justify-center text-3xl font-serif text-white mx-auto mb-8 group-hover:scale-110 group-hover:bg-luxury-taupe transition-all duration-500 shadow-glow">III</div>
                 <h4 class="text-2xl font-serif text-center mb-4 text-white group-hover:text-luxury-taupe transition-colors duration-300">Η Αλλαγή</h4>
-                <p class="text-gray-400 text-center font-light leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+                <p class="text-luxury-pearl/60 text-center font-light leading-relaxed group-hover:text-white transition-colors duration-300">
                     Περνάμε στη δράση με τη δύναμη της CBT. Σχεδιάζουμε πρακτικά βήματα, αντικαθιστούμε τα μοτίβα που σας κρατούν πίσω και χτίζουμε μια νέα, σταθερή ψυχική ανθεκτικότητα.
                 </p>
             </div>
@@ -407,8 +413,21 @@
         </div>
     </section>
 
+    <!-- Quote 2 Section (Darker Earthy Tone) -->
+    <section class="py-32 bg-luxury-slate relative overflow-hidden flex items-center justify-center">
+        <!-- Subtle gradient for depth -->
+        <div class="absolute inset-0 bg-gradient-to-t from-luxury-dark/40 to-transparent"></div>
+        <div class="max-w-4xl mx-auto text-center px-6 reveal relative z-10">
+            <i data-lucide="quote" class="w-10 h-10 text-luxury-taupe mx-auto mb-8 opacity-70"></i>
+            <blockquote class="text-4xl md:text-6xl font-serif text-luxury-pearl italic text-balance leading-tight drop-shadow-md">
+                "The fears we don’t face become our limits."
+            </blockquote>
+            <div class="w-16 h-px bg-luxury-taupe mx-auto mt-10 opacity-50"></div>
+        </div>
+    </section>
+
     <!-- Reviews Section -->
-    <section id="reviews" class="py-32 bg-luxury-sand border-y border-luxury-taupe/10 overflow-hidden relative">
+    <section id="reviews" class="py-32 bg-luxury-sand overflow-hidden relative">
         <div class="absolute right-0 top-0 w-1/2 h-full bg-white/40 skew-x-12 transform translate-x-32 z-0"></div>
 
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10">
@@ -419,7 +438,7 @@
                 </span>
                 <h2 class="text-4xl md:text-6xl font-serif text-luxury-dark mb-6">Η Εμπιστοσύνη Σας</h2>
                 <p class="text-luxury-slate/70 font-light text-lg mb-10 leading-relaxed">Η μεγαλύτερη απόδειξη της δουλειάς μας είναι η ανακούφιση και η πρόοδος των θεραπευόμενων. Διαβάστε τις εμπειρίες τους όπως καταγράφηκαν στον επίσημο φορέα.</p>
-                <a href="https://www.doctoranytime.gr/d/Psychologos/gkika-athanasia" target="_blank" class="inline-flex items-center border border-luxury-dark px-8 py-4 hover:bg-luxury-dark hover:text-white transition-all duration-500 group bg-transparent">
+                <a href="https://www.doctoranytime.gr/d/Psychologos/gkika-athanasia" target="_blank" class="inline-flex items-center border border-luxury-dark px-8 py-4 hover:bg-luxury-dark hover:text-luxury-pearl transition-all duration-500 group bg-transparent">
                     <span class="text-sm font-bold tracking-wider mr-4">ΠΕΡΙΣΣΟΤΕΡΑ ΣΤΟ</span>
                     <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/lgoodoc.jpg" alt="Doctoranytime" class="h-5 mix-blend-multiply group-hover:brightness-0 group-hover:invert transition-all duration-300">
                 </a>
@@ -454,12 +473,12 @@
                                             <div class="flex gap-1 text-luxury-taupe mb-2">
                                                 ${'<i data-lucide="star" class="w-4 h-4 fill-current"></i>'.repeat(5)}
                                             </div>
-                                            <span class="font-bold font-serif text-2xl text-luxury-dark">10.0 <span class="text-lg text-gray-400 font-sans font-light">/ 10</span></span>
+                                            <span class="font-bold font-serif text-2xl text-luxury-dark">10.0 <span class="text-lg text-luxury-slate/40 font-sans font-light">/ 10</span></span>
                                         </div>
                                         <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/lgoodoc.jpg" class="h-6 object-contain opacity-80" alt="DoctorAnytime">
                                     </div>
                                     <p class="text-luxury-slate/80 font-light leading-relaxed mb-6 italic">"${r.text}"</p>
-                                    <div class="border-t border-luxury-sand pt-4 flex justify-between items-center text-xs text-luxury-slate/60">
+                                    <div class="border-t border-luxury-taupe/10 pt-4 flex justify-between items-center text-xs text-luxury-slate/60">
                                         <span class="font-bold tracking-wider uppercase text-luxury-dark">${r.name}</span>
                                         <span>${r.date} • ${r.rev} αξιολόγηση</span>
                                     </div>
@@ -473,14 +492,14 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-luxury-dark text-white pt-24 pb-12 border-t border-luxury-taupe/20 relative overflow-hidden">
+    <footer class="bg-luxury-dark text-luxury-pearl pt-24 pb-12 border-t border-luxury-taupe/20 relative overflow-hidden">
         <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-1/2 bg-luxury-taupe/5 blur-[120px] pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="grid md:grid-cols-3 gap-16 mb-20">
                 
                 <div class="reveal">
-                    <p class="text-gray-400 font-light leading-relaxed mb-8">
+                    <p class="text-luxury-pearl/70 font-light leading-relaxed mb-8">
                         Η επούλωση ξεκινά με ένα βήμα. Επικοινωνήστε για να ορίσουμε την πρώτη σας συνεδρία σε ένα περιβάλλον απόλυτης αποδοχής.
                     </p>
                     <a href="https://www.linkedin.com/in/athanasia-gkika-700072202/" target="_blank" class="inline-block hover:scale-110 hover:drop-shadow-lg transition-all duration-300">
@@ -490,7 +509,7 @@
 
                 <div class="reveal delay-100">
                     <h4 class="text-lg font-serif text-luxury-taupe mb-8 tracking-ultra uppercase">Στοιχεια Επικοινωνιας</h4>
-                    <ul class="space-y-6 text-gray-400 font-light">
+                    <ul class="space-y-6 text-luxury-pearl/70 font-light">
                         <li class="flex items-start gap-4">
                             <i data-lucide="map-pin" class="w-6 h-6 text-luxury-taupe shrink-0 mt-0.5"></i>
                             <span>Λεωφόρος Μεσογείων 8,<br>Αμπελόκηποι, Αττική</span>
@@ -504,7 +523,7 @@
 
                 <div class="reveal delay-200">
                     <h4 class="text-lg font-serif text-luxury-taupe mb-8 tracking-ultra uppercase">Ωραριο</h4>
-                    <ul class="space-y-4 text-gray-400 font-light">
+                    <ul class="space-y-4 text-luxury-pearl/70 font-light">
                         <li class="flex items-center gap-4">
                             <i data-lucide="clock" class="w-6 h-6 text-luxury-taupe shrink-0"></i>
                             <span class="tracking-wider">Δευτέρα - Σάββατο</span>
@@ -520,7 +539,7 @@
 
             </div>
 
-            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500 font-light">
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-luxury-pearl/40 font-light">
                 <p>© 2026 Αθανασία Γκίκα. Με την επιφύλαξη παντός δικαιώματος.</p>
                 <p>Designed by <a href="https://advonmedia.com" target="_blank" rel="noopener" class="text-luxury-taupe hover:text-white transition-colors font-medium">Advon Media</a></p>
             </div>
